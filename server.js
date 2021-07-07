@@ -87,5 +87,5 @@ app.post('/api/bench', function(req, res) {
 });
 
 
-// const SERVER_PORT=4000
-app.listen(4000, () => console.log(`running on 4000`));
+const SERVER_PORT = 4000
+app.listen(4000, () => console.log(`running on ${SERVER_PORT}`));
