@@ -16,8 +16,7 @@
   </div>
   <div class="box1">
     <h1>THE ATLAS APP!</h1>
-    <h2>A tool to help you determine exactley how close you are to joining the 1000lb club</h2>
-    <p>Below is a simple calculator to help you determine how close you are to joining the 1000lb club!</p>
+    <h2>An app that helps your figure out how close you are to joining the 1000lb club</h2>
   </div>
   
     <br>
@@ -25,26 +24,19 @@
     <br>
   <div class="box2">
     <h2>A short history and explanation</h2>
-    <p>History:  The 1000 pound club is a ficticious club for weight lifters whose combined squat, bench and deadlift is over 1000 pounds</p>
     <h4>"A man's worth is dictated not by the size of his estate nor the goods therin, but by his entry into the 1000 pound club." 
       <br>-Thomas Jefferson</h4>
-    <br>
-    <h4>"Bricks are heavy" 
-      <br>-L7</h4>
+    <h4>History</h4>
+    <p>The 1000 pound club is a ficticious club for weight lifters whose combined squat, bench and deadlift is over 1000 pounds</p>
+    <h4>How it works</h4>
+    <p>Enter your 1RM squat, bench and deadlift into the field below.  Click the "PRESS ME" button and it will tell you how close you are<br> to your target goals (see "lifting goals").  Check the bottom of the page for some additional lifting resources</p>
   </div>  
   <br>
   <br>
-  <div class="box3">
-    <h2>BELOW ARE YOUR LIFTING GOALS!!!</h2>
-    <p>A note about lifting goals.  The below target goals are based on the average lifter and are the minimum required to reach 1000 pounds.</p>
-    <p>
-        <ul>DEADLIFT=405</ul>
-        <ul>SQUAT=315</ul>
-        <ul>BENCH=280</ul>
-    </P>
-  </div>
+  
 <!-- <form action="/action_page.php" method="get" id="nameform">  -->
-   <div id="buttons">
+  <div>
+  <div id="buttons">
   <div class="inner"><label for="deadlift">ENTER DEADLIFT:     </label><input type="number" id="deadlift1"><button id="deadlift">PRESS ME</button></input></div>
   <br>
   <br>
@@ -53,6 +45,16 @@
   <br>
   <div class="inner"><label for="squat">ENTER SQUAT:     </label><input type="number"  id="squat1"><button id="squat">PRESS ME</button></input></div>
    </div>
+  <div class="box3">
+    <h2>LIFTING GOALS</h2>
+    <p>
+        <ul>DEADLIFT=405</ul>
+        <ul>SQUAT=315</ul>
+        <ul>BENCH=280</ul>
+    </P>
+  </div>
+</div>
+
  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
 <script>
    
@@ -137,12 +139,18 @@ document.querySelector("#squat").addEventListener("click", function() {
         });;
   })
    </script>
-<!-- <nav>
+ <div class="box4">
+   <br>
+   <h1>ADDITIONAL LIFTING RESOURCES</h1>
+<nav>
   <ol>
-    <li class="workout"><a href=".api/squat.html"></a>squat</li> 
+    <!-- <li class="workout"><a href="./index.html"></li> -->
+    <ul class="workout"><a href="./squat.html">Squat</a></ul> 
+    <ul class="workout"><a href="./deadlift.html">Deadlift</a></ul>
+    <ul class="workout"><a href="./bench.html">Bench Press</a></ul>
   </ol>
-</nav> -->
-
+</nav>
+</div>  
 </form>
 <script src="./server.js"></script>
 </body>

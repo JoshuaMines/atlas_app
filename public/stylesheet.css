@@ -3,6 +3,7 @@
     width:100%;
     text-align: center;
     align-items: center;
+    float: left;
     
 }
 
@@ -39,11 +40,30 @@
 }
 
 .box3{
-    width: 50%;
+    width: 30%;
+    float: center;
     margin: auto;
     border: 5px;
     border-style: dotted;
     border-color:rgb(240, 6, 142)
+}
+
+.box4{
+    width: 30%;
+    align-content: right;
+    float: right;
+    margin: auto;
+    border: 5px;
+    border-style: dashed;
+    border-color:rgb(240, 6, 142)
+}
+
+.workout{
+    align-items: left;
+    text-align: left;
+    font-size: medium;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
@@ -66,7 +86,7 @@ h3 {
 }
 
 h4 {
-    text-align: left;
+    text-align: center;
     size: 30pt;
     
 }

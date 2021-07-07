@@ -16,7 +16,7 @@ app.use("/stylesheet.css", express.static(path.join(__dirname, '/public/styleshe
 
 app.get('/', function(req, res) {
 
-  res.sendFile( path.join(__dirname, '../index.html'))
+  res.sendFile( path.join(__dirname, '/public/index.html'))
 })
 
 // let deadx = 415 //((deadlift/405)*100)
