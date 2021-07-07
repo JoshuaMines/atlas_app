@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 
@@ -9,6 +10,14 @@ app.use(express.json());
 // app.get('/', function (req, res) {
 //     res.sendFile('index.html')
 // })
+app.use(express.static(path.join(__dirname, '../public')))
+
+app.use("/stylesheet.css", express.static(path.join(__dirname, '/public/stylesheet.css')))
+
+app.get('/', function(req, res) {
+
+  res.sendFile( path.join(__dirname, '../index.html'))
+})
 
 // let deadx = 415 //((deadlift/405)*100)
 // let squatx = 315 //((squat/315)*100)
@@ -87,5 +96,5 @@ app.post('/api/bench', function(req, res) {
 });
 
 
-const SERVER_PORT = 4000
-app.listen(4000, () => console.log(`running on ${SERVER_PORT}`));
+const port = process.env.PORT || 4000
+app.listen(port, () => console.log(`running on ${port}`));
