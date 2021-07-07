@@ -1,0 +1,10 @@
+an app that tells you how close you are to joining the 1000lb club.
+
+    title welcoming people
+    text explaining what the 1000lb club is
+    text telling you what your goals should be
+    3 buttons
+        -squat target=315
+        -dealift target=405
+        -bench= 280
+    Message that pops up saying what percentage of the way you are

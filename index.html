@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <div class="randy1">
+  <img src=AtlasL.jpg width=100 height=200 frameBorder="0" ></img>
+  </div>
+  <div class="randy2">
+    <img src=AtlasL.jpg width=100 height=200 frameBorder="0" ></img>
+  </div>
+  <div class="box1">
+    <h1>THE ATLAS APP!</h1>
+    <h2>A tool to help you determine exactley how close you are to joining the 1000lb club</h2>
+    <p>Below is a simple calculator to help you determine how close you are to joining the 1000lb club!</p>
+  </div>
+  
+    <br>
+    <br>
+    <br>
+  <div class="box2">
+    <h2>A short history and explanation</h2>
+    <p>History:  The 1000 pound club is a ficticious club for weight lifters whose combined squat, bench and deadlift is over 1000 pounds</p>
+    <h4>"A man's worth is dictated not by the size of his estate nor the goods therin, but by his entry into the 1000 pound club." 
+      <br>-Thomas Jefferson</h4>
+    <br>
+    <h4>"Bricks are heavy" 
+      <br>-L7</h4>
+  </div>  
+  <br>
+  <br>
+  <div class="box3">
+    <h2>BELOW ARE YOUR LIFTING GOALS!!!</h2>
+    <p>A note about lifting goals.  The below target goals are based on the average lifter and are the minimum required to reach 1000 pounds.</p>
+    <p>
+        <ul>DEADLIFT=405</ul>
+        <ul>SQUAT=315</ul>
+        <ul>BENCH=280</ul>
+    </P>
+  </div>
+<!-- <form action="/action_page.php" method="get" id="nameform">  -->
+   <div id="buttons">
+  <div class="inner"><label for="deadlift">ENTER DEADLIFT:     </label><input type="number" id="deadlift1"><button id="deadlift">PRESS ME</button></input></div>
+  <br>
+  <br>
+  <div class="inner"><label for="bench">ENTER BENCH:     </label><input type="number" id="bench1"><button id="bench">PRESS ME</button></input></div>
+  <br>
+  <br>
+  <div class="inner"><label for="squat">ENTER SQUAT:     </label><input type="number"  id="squat1"><button id="squat">PRESS ME</button></input></div>
+   </div>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+<script>
+   
+  document.querySelector("#deadlift").addEventListener("click", function () {
+        const deadlift1 = document.querySelector('#deadlift1').value;
+
+        const body = { deadlift1 };
+        
+    axios.post("http://localhost:4000/api/deadlift/", body)
+        .then(function (res) {
+          
+              // alert('Item added!');
+            })
+            .catch(function(err) {
+              console.log(err)
+            });
+      
+  }) 
+  document.querySelector("#deadlift").addEventListener("click", function() {
+        axios.get("http://localhost:4000/api/deadlift/")
+            .then(function (res) {
+              
+              alert(res.data);
+            })
+            .catch(function(err) {
+              console.log(err)
+            });;
+      })
+
+  
+
+  document.querySelector("#bench").addEventListener("click", function () {
+        const bench1 = document.querySelector('#bench1').value;
+
+        const body = { bench1 };
+        
+    axios.post("http://localhost:4000/api/bench/", body)
+        .then(function (res) {
+          
+              // alert('Item added!');
+            })
+            .catch(function(err) {
+              console.log(err)
+            });
+      
+  }) 
+
+document.querySelector("#bench").addEventListener("click", function() {
+        axios.get("http://localhost:4000/api/bench/")
+            .then(function (res) {
+              
+              alert(res.data);
+            })
+            .catch(function(err) {
+              console.log(err)
+            });;
+      })
+
+document.querySelector("#squat").addEventListener("click", function () {
+    const squat1 = document.querySelector('#squat1').value;
+
+    const body = { squat1 };
+    
+axios.post("http://localhost:4000/api/squat/", body)
+    .then(function (res) {
+      
+          alert('Item added!');
+        })
+        .catch(function(err) {
+          console.log(err)
+        });
+  
+}) 
+document.querySelector("#squat").addEventListener("click", function() {
+    axios.get("http://localhost:4000/api/squat/")
+        .then(function (res) {
+          
+          alert(res.data);
+        })
+        .catch(function(err) {
+          console.log(err)
+        });;
+  })
+   </script>
+<!-- <nav>
+  <ol>
+    <li class="workout"><a href=".api/squat.html"></a>squat</li> 
+  </ol>
+</nav> -->
+
+</form>
+
+</body>
+</html>  
+
+

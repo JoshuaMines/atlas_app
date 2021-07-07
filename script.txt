@@ -1,0 +1,22 @@
+
+The Atlas App gives olympic lifters an easy and convenient way to see how close they are to gaining entry into the elite 1000 lb club.
+A lifter is considered a memebber of the 1000lb club when their combined squat, deadlift and bench all add up to 1000lbs.  This app 
+compares your current lift with a preditermined target weight and tells you how close you are to that weight.  The target numbers for this app
+are a 405lb deadlift 315 squat, and 280lb bench press.
+
+Before you use the app go and determine your squat, deadlift and bench 1 rep max.  Once you have that information plug it into the input fields 
+(action:go and put numbers in input fields).  click "PRESS ME" (action:click it) and you will see a pop up telling you how close you are to the
+target weight (action: hoover over weight pop up).  If some of your lifts are significantly closer to their target weight than the others scroll 
+to the bottom of the page and check out some of our workout plans and tips (action: scroll to the bottom and click on workout plans)!
+
+Designing the front end portion of the app was fairly simple, just HTML for the layout and some CSS magic for the colors.  The back end proved
+a little harder.  The javascript I used didn't want to connect with the frond end, to further complicate things I didn't spend enough time thinking
+of different names for the different inputs so I had to parse through 10 variations of the world 'deadlift' to try and get the front and back end
+to communicate.
+
+By far the hardest part was getting a simple math function (deadlift/405)*100) to give me a useable number and to make sure that my array only
+held one number.  With the help of an instructor I was able to use the Math.round function to take care of decimal places and the pop function to keep my array
+to one character.
+
+While this iteration of the app is very simple it does have the potential to be built out into something that can really help weight lifters
+track their progress.  And that ladies and gentleman is the atlas app.

@@ -1,0 +1,86 @@
+.buttons {
+    size: 100pt;
+    width:100%;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.randy1 {
+    float: left;
+}
+
+.randy2 {
+    float: right;
+}
+.inner {
+    display: inline-block;
+    color: blue;
+    text-size-adjust: 40;
+
+}
+
+.box1{
+    width: 60%;
+    margin: auto;
+    border:5px; 
+    border-style:solid; 
+    border-color:#FF0000; 
+    
+    
+}
+
+.box2{
+    width: 80%;
+    margin: auto;
+    border: 3px;
+    border-style: solid;
+    border-color:chartreuse
+}
+
+.box3{
+    width: 50%;
+    margin: auto;
+    border: 5px;
+    border-style: dotted;
+    border-color:rgb(240, 6, 142)
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    size: 40pt;
+
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+    size: 30pt;
+}
+
+h3 {
+    text-align: center;
+    color: red;
+    size: 20pt;
+}
+
+h4 {
+    text-align: left;
+    size: 30pt;
+    
+}
+
+p {
+    color:black;
+    text-align: center;
+    size: 25pt;
+}
+
+
+
+ul {
+    text-align: center;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
